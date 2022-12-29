@@ -1,0 +1,7 @@
+FROM node:7
+WORKDIR /NodeApp
+COPY package.json /NodeApp
+RUN npm install
+COPY . /NodeApp
+CMD node server.js
+EXPOSE 8000
